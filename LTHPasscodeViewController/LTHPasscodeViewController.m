@@ -362,6 +362,7 @@ options:NSNumericSearch] != NSOrderedAscending)
 
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
+        [self statusBarFrameOrOrientationChanged:nil];
     if (!_passcodeTextField.isFirstResponder && (!_isUsingTouchID || _isUserChangingPasscode || _isUserBeingAskedForNewPasscode || _isUserConfirmingPasscode || _isUserEnablingPasscode || _isUserSwitchingBetweenPasscodeModes || _isUserTurningPasscodeOff)) {
         [_passcodeTextField becomeFirstResponder];
         _animatingView.hidden = NO;
