@@ -373,6 +373,9 @@ options:NSNumericSearch] != NSOrderedAscending)
     }
 }
 
+- (void)didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation{
+    [self statusBarFrameOrOrientationChanged:nil];
+}
 
 - (void)viewWillDisappear:(BOOL)animated {
     [super viewWillDisappear:animated];
